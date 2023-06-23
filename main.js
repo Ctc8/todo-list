@@ -4,6 +4,9 @@ let addToDoButton = document.getElementById("addToDo")
 let toDoContainer = document.getElementById("toDoContainer")
 let inputField = document.getElementById("inputField")
 
+let clearCompleted = document.getElementById("clearCompleted")
+let clearAll = document.getElementById("clearAll")
+
 // Press enter
 inputField.addEventListener('keyup', (e) => {
     if (e.keyCode === 13){
@@ -40,9 +43,8 @@ inputField.addEventListener('keyup', (e) => {
     }
 })
 
-
-checkButton.addEventListener('click', () => {
-    task.style.textDecoration = 'underline'
+clearAll.addEventListener('click', () => {
+    toDoContainer.innerHTML = ''
 })
 
 // Click the button
