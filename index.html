@@ -16,22 +16,24 @@
   </head>
 
   <body>
-    <div class="container text-center">
+
+    <header>
+      <div class="container text-center" id="headerContainer">
+      <h1 id="header">To Do List</h1>
+      
+      <!-- <div class="container" id="addBox"></div> -->
+      <input id="inputField" type="text" placeholder="Enter task..."/>
+      <button id="addToDo">Add</button>
+      </div>
+    </header>
+
+    <main>
       <div class="container" id="entireContainer">
-        <h1>To Do List</h1>
-        <div class="container" id="addBox"></div>
-        <input id="inputField" type="text" placeholder="Enter task..."/> 
-        <button id="addToDo">Add</button> 
         <div class="container" id="toDoContainer">
-          <!-- Adding stuff... -->
+        <!-- Adding stuff... -->
         </div>
       </div>
-
-      <div class="container">
-        <button id="clearCompleted">Clear Completed</button>
-        <button id="clearAll">Clear All</button>
-      </div>
-    </div>
+    </main>
 
     <script src="main.js"></script>
   </body>

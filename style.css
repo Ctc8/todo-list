@@ -1,56 +1,28 @@
 body {
     background-color: rgb(91, 189, 255);
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-#toDoListHeader {
-    margin-top: 15px;
-    font-size: 60px;
-}
-
-#toDoContainer {
-    background-color: white;
-
-    /* display: flex; */
+#header {
+    font-size: 7vh;
+    padding-top: 3vh;
 }
 
 #addToDo {
-    border-radius: 5px;
-    margin-left: 15px;
-    padding: 8px;
-    border: none;
     background-color: rgb(35, 130, 255);
     color: white;
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-#clearAll {
-    border-radius: 5px;
-    margin-left: 15px;
-    padding: 8px;
     border: none;
-    background-color: rgb(150, 150, 150);
-    color: white;
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-#clearCompleted {
-    border-radius: 5px;
-    margin-left: 15px;
-    padding: 8px;
-    border: none;
-    background-color: rgb(150, 150, 150);
-    color: white;
-    padding-right: 25px;
-    padding-left: 25px;
-}
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+} 
 
 #inputField {
     background-color: #eeeeee;
-    margin-top: 20px;
-    border-radius: 5px;
-    padding: 8px;
+    margin-top: 0.5vh;
+    padding: 1vh;
     width: 40vh;
     border: none;
 }
@@ -58,55 +30,185 @@ body {
 #entireContainer {
     text-align: center;
     background-color: #ffffff;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 8px 9px 11px 0px rgba(7, 0, 0, 0.49);
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
+    box-shadow: 8px 10px 11px 0px rgba(7, 0, 0, 0.49);
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 5vh;
     width: 90vh;
-    height: 80vh;
+    height: 70vh;
     overflow: auto;
+    border: none;
+}
+
+#headerContainer {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 8px 9px 11px 0px rgba(7, 0, 0, 0.49);
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    width: 90vh;
+    height: 22vh;
+    margin-top: 5vh;
 }
 
 .task-styling {
     flex-direction: row;
     justify-content: center;
     text-align: left;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 5px;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    padding: 3vh;
     box-sizing: border-box;
     background-color: #F2F2F2;
 }
 
 .check-button-styling {
-    background-color: rgb(30, 204, 4);
+    background-color: rgb(22, 168, 0);
     border: none;
     color: white;
-    font-size: 15px;
-    float: right;
     border-radius: 5px;
-    padding: 10px;
+    float: right;
     cursor: pointer;
+}
 
+.check-button-styling-dark {
+    background-color: #2C6B21;
+    border: none;
+    color: rgb(177, 177, 177);
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
 }
 
 .delete-button-styling {
     background-color: #df3030;
     border: none;
     color: white;
-    font-size: 15px;
-    float: right;
     border-radius: 5px;
-    padding: 10px;
+    float: right;
     cursor: pointer;
-    margin-right: 10px;
     margin-left: 10px;
+} 
+
+.delete-button-styling-dark {
+    background-color: #981717;
+    border: none;
+    color: rgb(177, 177, 177);
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+    margin-left: 10px;
+} 
+
+.markedCompleted {
+    color: #616161;
+    background-color: #C1C1C1;
 }
 
 #clearCompleted {
     margin-top: 53px;
+}
+
+@media screen and (max-width: 600px) {
+    #header {
+        font-size: 5vh;
+    }
+
+    #inputField {
+        background-color: #eeeeee;
+        margin-top: 2vh;
+        padding: 0.8vh;
+        width: 24vh;
+        border: none;
+    }
+
+    #addToDo {
+        background-color: rgb(35, 130, 255);
+        color: white;
+        border: none;
+        padding: 0.7vh;
+        padding-left: 1vh;
+        padding-right: 1vh;
+    } 
+
+    .task-styling {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        margin-top: 1vh;
+        margin-bottom: 1.5vh;
+        padding: 1.5vh;
+        box-sizing: border-box;
+        background-color: #F2F2F2;
+    }
+
+    .markedCompleted {
+        color: #616161;
+        background-color: #C1C1C1;
+    }
+
+    #entireContainer {
+        text-align: center;
+        background-color: #ffffff;
+        padding-left: 3vh;
+        padding-right: 3vh;
+        padding-top: 2vh;
+        width: 45vh;
+        height: 65vh;
+        overflow: auto;
+    }
+
+    #headerContainer {
+        background-color: rgb(255, 255, 255);
+        margin-top: 4vh;
+        padding-left: 5vh;
+        padding-right: 5vh;
+        padding-top: 2vh;
+        width: 45vh;
+        height: 20vh;
+    }
+
+    .check-button-styling {
+        background-color: rgb(22, 168, 0);
+        border: none;
+        color: white;
+        font-size: 10px;
+        float: right;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .delete-button-styling {
+        background-color: #df3030;
+        border: none;
+        color: white;
+        font-size: 10px;
+        float: right;
+        padding: 8px;
+        cursor: pointer;
+        margin-left: 8px;
+    } 
+
+    .check-button-styling-dark {
+        background-color: #2C6B21;
+        border: none;
+        color: rgb(177, 177, 177);
+        font-size: 10px;
+        float: right;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .delete-button-styling-dark {
+        background-color: #981717;
+        border: none;
+        color: rgb(177, 177, 177);
+        font-size: 10px;
+        float: right;
+        padding: 8px;
+        cursor: pointer;
+        margin-left: 8px;
+    } 
+
 }
